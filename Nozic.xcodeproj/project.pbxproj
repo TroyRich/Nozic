@@ -12,9 +12,13 @@
 		AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3671E745F1C00B99DB7 /* AppDelegate.m */; };
 		AFECB3701E745F1C00B99DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */; };
 		AFECB3731E745F1C00B99DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFECB3711E745F1C00B99DB7 /* LaunchScreen.storyboard */; };
+		C2B3D51D273123E2B9032A0C /* libPods-Nozic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 386AC35AC3749B8CD2E328EF /* libPods-Nozic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FAD005B900D77DCE4D44F3A /* Pods-Nozic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.release.xcconfig"; sourceTree = "<group>"; };
+		386AC35AC3749B8CD2E328EF /* libPods-Nozic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nozic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.debug.xcconfig"; sourceTree = "<group>"; };
 		AF618DC31E75B288008FA127 /* WYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMainViewController.h; sourceTree = "<group>"; };
 		AF618DC41E75B288008FA127 /* WYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMainViewController.m; sourceTree = "<group>"; };
 		AFECB3601E745F1C00B99DB7 /* Nozic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nozic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B3D51D273123E2B9032A0C /* libPods-Nozic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451D2EB658D7EC1192C0A80B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */,
+				2FAD005B900D77DCE4D44F3A /* Pods-Nozic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9ABC73C361516C0DCE5ADF87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				386AC35AC3749B8CD2E328EF /* libPods-Nozic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFECB3571E745F1B00B99DB7 = {
 			isa = PBXGroup;
 			children = (
 				AFECB3621E745F1C00B99DB7 /* Nozic */,
 				AFECB3611E745F1C00B99DB7 /* Products */,
+				451D2EB658D7EC1192C0A80B /* Pods */,
+				9ABC73C361516C0DCE5ADF87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFECB3771E745F1C00B99DB7 /* Build configuration list for PBXNativeTarget "Nozic" */;
 			buildPhases = (
+				AEA4AD1B78D96C63966C73FF /* [CP] Check Pods Manifest.lock */,
 				AFECB35C1E745F1B00B99DB7 /* Sources */,
 				AFECB35D1E745F1B00B99DB7 /* Frameworks */,
 				AFECB35E1E745F1B00B99DB7 /* Resources */,
+				264507AA1BC1A61879A9A431 /* [CP] Embed Pods Frameworks */,
+				801145DF397285CD5D781C5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		264507AA1BC1A61879A9A431 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nozic/Pods-Nozic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		801145DF397285CD5D781C5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nozic/Pods-Nozic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEA4AD1B78D96C63966C73FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFECB35C1E745F1B00B99DB7 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		AFECB3781E745F1C00B99DB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N244LJ89FV;
@@ -271,6 +347,7 @@
 		};
 		AFECB3791E745F1C00B99DB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FAD005B900D77DCE4D44F3A /* Pods-Nozic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N244LJ89FV;
