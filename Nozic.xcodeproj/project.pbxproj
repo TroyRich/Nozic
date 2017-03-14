@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF618DC51E75B288008FA127 /* WYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF618DC41E75B288008FA127 /* WYXMainViewController.m */; };
+		AF6348BA1E77BA6C00756B69 /* WYXSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */; };
 		AFECB3651E745F1C00B99DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3641E745F1C00B99DB7 /* main.m */; };
 		AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3671E745F1C00B99DB7 /* AppDelegate.m */; };
 		AFECB3701E745F1C00B99DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.debug.xcconfig"; sourceTree = "<group>"; };
 		AF618DC31E75B288008FA127 /* WYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMainViewController.h; sourceTree = "<group>"; };
 		AF618DC41E75B288008FA127 /* WYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMainViewController.m; sourceTree = "<group>"; };
+		AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXSettingTableViewController.h; sourceTree = "<group>"; };
+		AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXSettingTableViewController.m; sourceTree = "<group>"; };
 		AFECB3601E745F1C00B99DB7 /* Nozic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nozic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFECB3641E745F1C00B99DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFECB3661E745F1C00B99DB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				AFECB3661E745F1C00B99DB7 /* AppDelegate.h */,
 				AFECB3671E745F1C00B99DB7 /* AppDelegate.m */,
 				AF618DC31E75B288008FA127 /* WYXMainViewController.h */,
+				AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */,
+				AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */,
 				AF618DC41E75B288008FA127 /* WYXMainViewController.m */,
 				AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */,
 				AFECB3711E745F1C00B99DB7 /* LaunchScreen.storyboard */,
@@ -226,6 +231,7 @@
 				AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */,
 				AFECB3651E745F1C00B99DB7 /* main.m in Sources */,
 				AF618DC51E75B288008FA127 /* WYXMainViewController.m in Sources */,
+				AF6348BA1E77BA6C00756B69 /* WYXSettingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

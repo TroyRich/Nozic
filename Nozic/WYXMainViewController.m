@@ -8,19 +8,29 @@
 
 #import "WYXMainViewController.h"
 #import <Masonry.h>
+#import "WYXSettingTableViewController.h"
 
 @interface WYXMainViewController ()
 
+/** 上工具栏 */
+@property (nonatomic,strong) UIToolbar *topToolBar;
+/** 用户自己的库的按钮 */
+@property (nonatomic,strong) UIBarButtonItem *libraryBarItem;
+/** 设置按钮 */
+@property (nonatomic,strong) UIBarButtonItem *settingBarItem;
+
+
+
 
 /** 下工具栏 */
-@property (nonatomic,strong) UIToolbar *toolBar;
+@property (nonatomic,strong) UIToolbar *buttomToolBar;
 
 /** 保存按钮 */
-@property (nonatomic,strong) UIBarButtonItem *saveBtn;
+@property (nonatomic,strong) UIBarButtonItem *saveBarItem;
 /** 播放按钮 */
-@property (nonatomic,strong) UIBarButtonItem *playBtn;
+@property (nonatomic,strong) UIBarButtonItem *playBarItem;
 /** 定时按钮 */
-@property (nonatomic,strong) UIBarButtonItem *timerBtn;
+@property (nonatomic,strong) UIBarButtonItem *timerBarItem;
 
 
 
@@ -32,12 +42,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self addButtomBtn];
+    [self createTopBar];
+    [self addButtomBar];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+        [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)createTopBar{
+    self.libraryBarItem = [[UIBarButtonItem alloc] initWithTitle:@"资料库" style:UIBarButtonItemStyleDone target:self action:@selector(libraryBtnDidTouch:)];
+    
+//    [self navigationController].navigationItem.leftBarButtonItem = self.libraryBarItem;
+    
+    self.settingBarItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(settingBtnDidTouch:)];
+//     [self navigationController].navigationItem.rightBarButtonItem = self.settingBarItem;
+    
+    UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    NSArray *toolBarItems = [NSArray arrayWithObjects:self.libraryBarItem,flexible,self.settingBarItem,nil];
+    
+//    [self.navigationController setToolbarItems:toolBarItems];
+    //ToolBar的创建
+
+    self.topToolBar = [[UIToolbar alloc] init];
+    [self.topToolBar setBarStyle:UIBarStyleBlackOpaque];
+    [self.view addSubview:self.topToolBar];
+    [self.topToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top);
+        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 44));
+    }];
+    
+    
+    [self.topToolBar setItems:toolBarItems];
+}
+
+-(void)libraryBtnDidTouch:(id *)sender
+{
+    
+}
+
+-(void)settingBtnDidTouch:(id *)sender
+{
+    WYXSettingTableViewController *tableVC = [[WYXSettingTableViewController alloc] init];
+//    tableVC.view.frame = self.navigationController.view.frame;
+    [self.navigationController pushViewController:tableVC animated:YES];
 }
 
 //创建配置好的数据
@@ -46,29 +101,28 @@
 }
 
 //添加底部按钮
--(void)addButtomBtn
+-(void)addButtomBar
 {
-    self.saveBtn = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnDidTouch:)];
+    self.saveBarItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnDidTouch:)];
     
-    self.playBtn = [[UIBarButtonItem alloc] initWithTitle:@"播放" style:UIBarButtonItemStyleDone target:self action:@selector(playBtnDidTouch:)];
+    self.playBarItem = [[UIBarButtonItem alloc] initWithTitle:@"播放" style:UIBarButtonItemStyleDone target:self action:@selector(playBtnDidTouch:)];
     
-    self.timerBtn = [[UIBarButtonItem alloc] initWithTitle:@"定时器" style:UIBarButtonItemStyleDone target:self action:@selector(timerBtnDidTouch:)];
+    self.timerBarItem = [[UIBarButtonItem alloc] initWithTitle:@"定时器" style:UIBarButtonItemStyleDone target:self action:@selector(timerBtnDidTouch:)];
     
     UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    NSArray *toolBarItems = [NSArray arrayWithObjects:self.saveBtn,flexible,self.playBtn,flexible,self.timerBtn,nil];
+    NSArray *toolBarItems = [NSArray arrayWithObjects:self.saveBarItem,flexible,self.playBarItem,flexible,self.timerBarItem,nil];
     //ToolBar的创建
-//    self.toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 366 + 54, 320, 50)];
-    self.toolBar = [[UIToolbar alloc] init];
-    [self.toolBar setBarStyle:UIBarStyleBlackOpaque];
-    [self.view addSubview:self.toolBar];
-    [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.buttomToolBar = [[UIToolbar alloc] init];
+    [self.buttomToolBar setBarStyle:UIBarStyleBlackOpaque];
+    [self.view addSubview:self.buttomToolBar];
+    [self.buttomToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom);
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 64.0));
+        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 44));
     }];
     
 
-    [self.toolBar setItems:toolBarItems];
+    [self.buttomToolBar setItems:toolBarItems];
 
 }
 

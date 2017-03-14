@@ -25,10 +25,14 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //设置窗口的根控制器
-    self.window.rootViewController = [[WYXMainViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[WYXMainViewController alloc] init]];
+    self.window.rootViewController = nav ;
     
     //显示窗口
     [self.window makeKeyAndVisible];
+    
+    //状态栏的隐藏
+//    [UIApplication sharedApplication].statusBarHidden = YES;
     
     return YES;
 }
