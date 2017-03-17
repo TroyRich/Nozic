@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>蝉鸣</string>
+		<key>filename</key>
+		<string>cicada</string>
+		<key>icon</key>
+		<string>cicada_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>牛叫</string>
+		<key>filename</key>
+		<string>cow</string>
+		<key>icon</key>
+		<string>cow_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>人群</string>
+		<key>filename</key>
+		<string>crowd</string>
+		<key>icon</key>
+		<string>crowd_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>滴水</string>
+		<key>filename</key>
+		<string>drop</string>
+		<key>icon</key>
+		<string>drop_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>餐馆</string>
+		<key>filename</key>
+		<string>restaurant</string>
+		<key>icon</key>
+		<string>restaurant_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>海鸥</string>
+		<key>filename</key>
+		<string>sea gull</string>
+		<key>icon</key>
+		<string>sea_gull_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>海浪</string>
+		<key>filename</key>
+		<string>sea wave</string>
+		<key>icon</key>
+		<string>sea_wave_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>雷电</string>
+		<key>filename</key>
+		<string>thunder</string>
+		<key>icon</key>
+		<string>thunder_icon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>风声</string>
+		<key>filename</key>
+		<string>wind</string>
+		<key>icon</key>
+		<string>wind_icon</string>
+	</dict>
+</array>
+</plist>

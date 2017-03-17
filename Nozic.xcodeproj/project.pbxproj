@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF5F5CCD1E7823D5008B4B73 /* cicada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CC41E7823D5008B4B73 /* cicada.mp3 */; };
-		AF5F5CCE1E7823D5008B4B73 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CC51E7823D5008B4B73 /* cow.mp3 */; };
-		AF5F5CCF1E7823D5008B4B73 /* crowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CC61E7823D5008B4B73 /* crowd.mp3 */; };
-		AF5F5CD01E7823D5008B4B73 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CC71E7823D5008B4B73 /* drop.mp3 */; };
-		AF5F5CD21E7823D5008B4B73 /* sea gull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CC91E7823D5008B4B73 /* sea gull.mp3 */; };
-		AF5F5CD31E7823D5008B4B73 /* sea wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CCA1E7823D5008B4B73 /* sea wave.mp3 */; };
-		AF5F5CD41E7823D5008B4B73 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CCB1E7823D5008B4B73 /* thunder.mp3 */; };
-		AF5F5CD51E7823D5008B4B73 /* wind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CCC1E7823D5008B4B73 /* wind.mp3 */; };
-		AF5F5CD71E78244F008B4B73 /* Sounds.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CD61E78244F008B4B73 /* Sounds.plist */; };
-		AF5F5CD91E78257E008B4B73 /* restaurant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5F5CD81E78257E008B4B73 /* restaurant.mp3 */; };
+		AF4C0BD81E7A589F005BF6B7 /* WYXMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */; };
+		AF5372151E791569002B2B85 /* cicada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF53720B1E791569002B2B85 /* cicada.mp3 */; };
+		AF5372161E791569002B2B85 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF53720C1E791569002B2B85 /* cow.mp3 */; };
+		AF5372171E791569002B2B85 /* crowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF53720D1E791569002B2B85 /* crowd.mp3 */; };
+		AF5372181E791569002B2B85 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF53720E1E791569002B2B85 /* drop.mp3 */; };
+		AF5372191E791569002B2B85 /* restaurant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF53720F1E791569002B2B85 /* restaurant.mp3 */; };
+		AF53721A1E791569002B2B85 /* sea gull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5372101E791569002B2B85 /* sea gull.mp3 */; };
+		AF53721B1E791569002B2B85 /* sea wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5372111E791569002B2B85 /* sea wave.mp3 */; };
+		AF53721C1E791569002B2B85 /* Sounds.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF5372121E791569002B2B85 /* Sounds.plist */; };
+		AF53721D1E791569002B2B85 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5372131E791569002B2B85 /* thunder.mp3 */; };
+		AF53721E1E791569002B2B85 /* wind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF5372141E791569002B2B85 /* wind.mp3 */; };
 		AF618DC51E75B288008FA127 /* WYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF618DC41E75B288008FA127 /* WYXMainViewController.m */; };
 		AF6348BA1E77BA6C00756B69 /* WYXSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */; };
+		AF9ECF2C1E7BE0D900B3A688 /* WYXMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */; };
 		AFECB3651E745F1C00B99DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3641E745F1C00B99DB7 /* main.m */; };
 		AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3671E745F1C00B99DB7 /* AppDelegate.m */; };
 		AFECB3701E745F1C00B99DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */; };
@@ -30,20 +32,24 @@
 		2FAD005B900D77DCE4D44F3A /* Pods-Nozic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.release.xcconfig"; sourceTree = "<group>"; };
 		386AC35AC3749B8CD2E328EF /* libPods-Nozic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nozic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.debug.xcconfig"; sourceTree = "<group>"; };
-		AF5F5CC41E7823D5008B4B73 /* cicada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cicada.mp3; sourceTree = "<group>"; };
-		AF5F5CC51E7823D5008B4B73 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
-		AF5F5CC61E7823D5008B4B73 /* crowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crowd.mp3; sourceTree = "<group>"; };
-		AF5F5CC71E7823D5008B4B73 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
-		AF5F5CC91E7823D5008B4B73 /* sea gull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sea gull.mp3"; sourceTree = "<group>"; };
-		AF5F5CCA1E7823D5008B4B73 /* sea wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sea wave.mp3"; sourceTree = "<group>"; };
-		AF5F5CCB1E7823D5008B4B73 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
-		AF5F5CCC1E7823D5008B4B73 /* wind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wind.mp3; sourceTree = "<group>"; };
-		AF5F5CD61E78244F008B4B73 /* Sounds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sounds.plist; sourceTree = "<group>"; };
-		AF5F5CD81E78257E008B4B73 /* restaurant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = restaurant.mp3; sourceTree = "<group>"; };
+		AF4C0BD61E7A589F005BF6B7 /* WYXMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYXMusic.h; path = Nozic/WYXMusic.h; sourceTree = SOURCE_ROOT; };
+		AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYXMusic.m; path = Nozic/WYXMusic.m; sourceTree = SOURCE_ROOT; };
+		AF53720B1E791569002B2B85 /* cicada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cicada.mp3; sourceTree = "<group>"; };
+		AF53720C1E791569002B2B85 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
+		AF53720D1E791569002B2B85 /* crowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crowd.mp3; sourceTree = "<group>"; };
+		AF53720E1E791569002B2B85 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
+		AF53720F1E791569002B2B85 /* restaurant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = restaurant.mp3; sourceTree = "<group>"; };
+		AF5372101E791569002B2B85 /* sea gull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sea gull.mp3"; sourceTree = "<group>"; };
+		AF5372111E791569002B2B85 /* sea wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sea wave.mp3"; sourceTree = "<group>"; };
+		AF5372121E791569002B2B85 /* Sounds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sounds.plist; sourceTree = "<group>"; };
+		AF5372131E791569002B2B85 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
+		AF5372141E791569002B2B85 /* wind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wind.mp3; sourceTree = "<group>"; };
 		AF618DC31E75B288008FA127 /* WYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMainViewController.h; sourceTree = "<group>"; };
 		AF618DC41E75B288008FA127 /* WYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMainViewController.m; sourceTree = "<group>"; };
 		AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXSettingTableViewController.h; sourceTree = "<group>"; };
 		AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXSettingTableViewController.m; sourceTree = "<group>"; };
+		AF9ECF2A1E7BE0D900B3A688 /* WYXMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMusicTool.h; sourceTree = "<group>"; };
+		AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMusicTool.m; sourceTree = "<group>"; };
 		AFECB3601E745F1C00B99DB7 /* Nozic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nozic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFECB3641E745F1C00B99DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFECB3661E745F1C00B99DB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,19 +88,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF5F5CC31E7823D5008B4B73 /* Sounds */ = {
+		AF5372091E791568002B2B85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AF5F5CC41E7823D5008B4B73 /* cicada.mp3 */,
-				AF5F5CC51E7823D5008B4B73 /* cow.mp3 */,
-				AF5F5CC61E7823D5008B4B73 /* crowd.mp3 */,
-				AF5F5CC71E7823D5008B4B73 /* drop.mp3 */,
-				AF5F5CC91E7823D5008B4B73 /* sea gull.mp3 */,
-				AF5F5CD81E78257E008B4B73 /* restaurant.mp3 */,
-				AF5F5CCA1E7823D5008B4B73 /* sea wave.mp3 */,
-				AF5F5CCB1E7823D5008B4B73 /* thunder.mp3 */,
-				AF5F5CCC1E7823D5008B4B73 /* wind.mp3 */,
-				AF5F5CD61E78244F008B4B73 /* Sounds.plist */,
+				AF53720A1E791569002B2B85 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF53720A1E791569002B2B85 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AF53720B1E791569002B2B85 /* cicada.mp3 */,
+				AF53720C1E791569002B2B85 /* cow.mp3 */,
+				AF53720D1E791569002B2B85 /* crowd.mp3 */,
+				AF53720E1E791569002B2B85 /* drop.mp3 */,
+				AF53720F1E791569002B2B85 /* restaurant.mp3 */,
+				AF5372101E791569002B2B85 /* sea gull.mp3 */,
+				AF5372111E791569002B2B85 /* sea wave.mp3 */,
+				AF5372121E791569002B2B85 /* Sounds.plist */,
+				AF5372131E791569002B2B85 /* thunder.mp3 */,
+				AF5372141E791569002B2B85 /* wind.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -121,14 +135,17 @@
 			isa = PBXGroup;
 			children = (
 				AFECB3661E745F1C00B99DB7 /* AppDelegate.h */,
+				AF4C0BD61E7A589F005BF6B7 /* WYXMusic.h */,
+				AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */,
 				AFECB3671E745F1C00B99DB7 /* AppDelegate.m */,
+				AF9ECF2A1E7BE0D900B3A688 /* WYXMusicTool.h */,
+				AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */,
 				AF618DC31E75B288008FA127 /* WYXMainViewController.h */,
 				AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */,
 				AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */,
 				AF618DC41E75B288008FA127 /* WYXMainViewController.m */,
 				AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */,
 				AFECB3711E745F1C00B99DB7 /* LaunchScreen.storyboard */,
-				AF5F5CC31E7823D5008B4B73 /* Sounds */,
 				AFECB3741E745F1C00B99DB7 /* Info.plist */,
 				AFECB3631E745F1C00B99DB7 /* Supporting Files */,
 			);
@@ -138,6 +155,7 @@
 		AFECB3631E745F1C00B99DB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF5372091E791568002B2B85 /* Resources */,
 				AFECB3641E745F1C00B99DB7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -206,18 +224,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF5F5CCF1E7823D5008B4B73 /* crowd.mp3 in Resources */,
-				AF5F5CD91E78257E008B4B73 /* restaurant.mp3 in Resources */,
-				AF5F5CD41E7823D5008B4B73 /* thunder.mp3 in Resources */,
-				AF5F5CD71E78244F008B4B73 /* Sounds.plist in Resources */,
-				AF5F5CCD1E7823D5008B4B73 /* cicada.mp3 in Resources */,
+				AF5372171E791569002B2B85 /* crowd.mp3 in Resources */,
+				AF5372151E791569002B2B85 /* cicada.mp3 in Resources */,
 				AFECB3731E745F1C00B99DB7 /* LaunchScreen.storyboard in Resources */,
-				AF5F5CD51E7823D5008B4B73 /* wind.mp3 in Resources */,
-				AF5F5CD31E7823D5008B4B73 /* sea wave.mp3 in Resources */,
-				AF5F5CCE1E7823D5008B4B73 /* cow.mp3 in Resources */,
+				AF5372161E791569002B2B85 /* cow.mp3 in Resources */,
+				AF53721B1E791569002B2B85 /* sea wave.mp3 in Resources */,
 				AFECB3701E745F1C00B99DB7 /* Assets.xcassets in Resources */,
-				AF5F5CD01E7823D5008B4B73 /* drop.mp3 in Resources */,
-				AF5F5CD21E7823D5008B4B73 /* sea gull.mp3 in Resources */,
+				AF5372191E791569002B2B85 /* restaurant.mp3 in Resources */,
+				AF53721D1E791569002B2B85 /* thunder.mp3 in Resources */,
+				AF53721E1E791569002B2B85 /* wind.mp3 in Resources */,
+				AF5372181E791569002B2B85 /* drop.mp3 in Resources */,
+				AF53721C1E791569002B2B85 /* Sounds.plist in Resources */,
+				AF53721A1E791569002B2B85 /* sea gull.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +296,10 @@
 			files = (
 				AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */,
 				AFECB3651E745F1C00B99DB7 /* main.m in Sources */,
+				AF9ECF2C1E7BE0D900B3A688 /* WYXMusicTool.m in Sources */,
 				AF618DC51E75B288008FA127 /* WYXMainViewController.m in Sources */,
 				AF6348BA1E77BA6C00756B69 /* WYXSettingTableViewController.m in Sources */,
+				AF4C0BD81E7A589F005BF6B7 /* WYXMusic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

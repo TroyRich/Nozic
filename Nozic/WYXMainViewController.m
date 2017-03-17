@@ -32,6 +32,8 @@
 /** 定时按钮 */
 @property (nonatomic,strong) UIBarButtonItem *timerBarItem;
 
+/** 声音特效arr */
+@property (nonatomic,strong) NSArray *soundsArr;
 
 
 
@@ -42,6 +44,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //从应用的buudle中加载音频配置
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *string = [mainBundle pathForResource:@"Sounds" ofType:@"plist"];
+    NSDictionary *dic =  [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:string]];
+    self.soundsArr = [NSArray arrayWithContentsOfFile:string];
+    
     [self createTopBar];
     [self addButtomBar];
 }
