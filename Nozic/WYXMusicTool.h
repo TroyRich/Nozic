@@ -13,9 +13,7 @@
 /** 应用程序配置的音乐 */
 @property (nonatomic,strong) NSArray *musics;
 
++(instancetype)sharedMusicTool;
 
-+(instancetype *)shareObject;
-
-+(NSArray *)musics;
 
 @end

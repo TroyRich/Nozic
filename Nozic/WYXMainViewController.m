@@ -9,8 +9,15 @@
 #import "WYXMainViewController.h"
 #import <Masonry.h>
 #import "WYXSettingTableViewController.h"
+#import "WYXMusicTool.h"
+#import "WYXMusic.h"
 
 @interface WYXMainViewController ()
+
+/** tableVC */
+@property (nonatomic,strong) UITableViewController *tableVC;
+
+
 
 /** 上工具栏 */
 @property (nonatomic,strong) UIToolbar *topToolBar;
@@ -33,7 +40,7 @@
 @property (nonatomic,strong) UIBarButtonItem *timerBarItem;
 
 /** 声音特效arr */
-@property (nonatomic,strong) NSArray *soundsArr;
+@property (nonatomic,strong)NSArray *soundsArr;
 
 
 
@@ -45,14 +52,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //从应用的buudle中加载音频配置
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *string = [mainBundle pathForResource:@"Sounds" ofType:@"plist"];
-    NSDictionary *dic =  [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:string]];
-    self.soundsArr = [NSArray arrayWithContentsOfFile:string];
+    //获取音频配置
+    self.soundsArr = [[WYXMusicTool sharedMusicTool] musics];
     
     [self createTopBar];
     [self addButtomBar];
+    
+    self.tableVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.view addSubview:self.tableVC.view];
+    
+    [self.tableVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.topToolBar.mas_bottom);
+        make.bottom.mas_equalTo(self.buttomToolBar.mas_top);
+        make.width.mas_equalTo(self.view.mas_width);
+    }];
+    self.tableVC.tableView.delegate = self;
+    self.tableVC.tableView.dataSource = self;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -77,7 +93,6 @@
     
     NSArray *toolBarItems = [NSArray arrayWithObjects:self.libraryBarItem,flexible,self.settingBarItem,nil];
     
-//    [self.navigationController setToolbarItems:toolBarItems];
     //ToolBar的创建
 
     self.topToolBar = [[UIToolbar alloc] init];
@@ -87,7 +102,6 @@
         make.top.equalTo(self.view.mas_top);
         make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 44));
     }];
-    
     
     [self.topToolBar setItems:toolBarItems];
 }
@@ -125,11 +139,11 @@
     self.buttomToolBar = [[UIToolbar alloc] init];
     [self.buttomToolBar setBarStyle:UIBarStyleBlackOpaque];
     [self.view addSubview:self.buttomToolBar];
+
     [self.buttomToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom);
         make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 44));
     }];
-    
 
     [self.buttomToolBar setItems:toolBarItems];
 
@@ -156,14 +170,28 @@
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
-*/
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.soundsArr count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    WYXMusic *music = self.soundsArr[indexPath.row];
+    cell.textLabel.text = music.name;
+    
+    
+    return cell;
+}
+
 
 @end

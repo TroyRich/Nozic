@@ -13,7 +13,7 @@
 /**声音的名字 */
 @property (nonatomic,strong) NSString *name;
 /** 资源的名字 */
-@property (nonatomic,strong) NSString *fileName;
+@property (nonatomic,strong) NSString *filename;
 /** 声音的图标资源 */
 @property (nonatomic,strong) NSString *icon;
 

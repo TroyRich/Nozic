@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WYXMainViewController : UIViewController
+@interface WYXMainViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @end
