@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WYXMainViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -30,9 +31,8 @@
     
     //显示窗口
     [self.window makeKeyAndVisible];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     
-    //状态栏的隐藏
-//    [UIApplication sharedApplication].statusBarHidden = YES;
     
     return YES;
 }

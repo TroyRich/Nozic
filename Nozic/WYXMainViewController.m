@@ -11,6 +11,7 @@
 #import "WYXSettingTableViewController.h"
 #import "WYXMusicTool.h"
 #import "WYXMusic.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface WYXMainViewController ()
 
@@ -42,6 +43,12 @@
 /** 声音特效arr */
 @property (nonatomic,strong)NSArray *soundsArr;
 
+/** player */
+@property (nonatomic,strong) AVAudioPlayer *player;
+/** playerDic */
+//@property (nonatomic,strong) NSMutableDictionary *playerDic;
+
+
 
 
 @end
@@ -54,6 +61,7 @@
     
     //获取音频配置
     self.soundsArr = [[WYXMusicTool sharedMusicTool] musics];
+//    _playerDic = [[WYXMusicTool sharedMusicTool] avPlayerDic];
     
     [self createTopBar];
     [self addButtomBar];
@@ -68,7 +76,12 @@
     }];
     self.tableVC.tableView.delegate = self;
     self.tableVC.tableView.dataSource = self;
+     self.tableVC.tableView.allowsMultipleSelection = YES;
     
+}
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -192,6 +205,49 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    [self playMusic:indexPath selected:YES];
+
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self playMusic:indexPath selected:NO];
+}
+
+-(void)playMusic:(NSIndexPath *)indexPath selected:(BOOL)selected
+{
+    WYXMusic *music = self.soundsArr[indexPath.row];
+    
+//    _player = [_playerDic valueForKey:music.filename];
+    _player  = [[[WYXMusicTool sharedMusicTool] avPlayerDic] valueForKey:music.filename];
+    if (!_player) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:music.filename ofType:@"mp3"];
+
+        NSError *error = [[NSError alloc]init];
+
+        NSURL *url = [[NSURL alloc]initFileURLWithPath:filePath];
+        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+
+        NSMutableDictionary *dic = [WYXMusicTool sharedMusicTool].avPlayerDic;
+                              
+        [dic setValue:_player forKey:music.filename];
+        _player.numberOfLoops = -1;
+    }
+    if (!selected) {
+        [_player pause];
+    }else{
+        [_player prepareToPlay];
+        [_player play];
+    }
+}
+
+
+
+
 
 
 @end

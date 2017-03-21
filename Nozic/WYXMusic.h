@@ -17,6 +17,8 @@
 /** 声音的图标资源 */
 @property (nonatomic,strong) NSString *icon;
 
+/** 是否被选中 */
+@property (nonatomic) BOOL isSelected;
 
 
 

@@ -9,12 +9,11 @@
 #import "WYXMusicTool.h"
 #import <MJExtension.h>
 #import "WYXMusic.h"
+#import <AVFoundation/AVFoundation.h>
 
 static WYXMusicTool *class = nil;
 
 @interface WYXMusicTool()
-
-
 
 
 
@@ -45,6 +44,15 @@ static WYXMusicTool *class = nil;
     return  nil;
 }
 
+//当前控制器是否在播放音乐
+-(BOOL)isPlayMusic{
+    return YES;
+}
+
+-(void)pushMusic:(NSArray *)pushArr{
+    
+}
+
 
 -(NSArray *)musics
 {
@@ -55,5 +63,14 @@ static WYXMusicTool *class = nil;
     
     return  _musics;
 }
+
+-(NSMutableDictionary *)avPlayerDic
+{
+    if (!_avPlayerDic) {
+        _avPlayerDic = [[NSMutableDictionary alloc] init];
+    }
+    return _avPlayerDic;
+}
+
 
 @end

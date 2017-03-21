@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF4C0BD81E7A589F005BF6B7 /* WYXMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */; };
+		AF4DE52A1E7D92DF004FDBC9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4DE5291E7D92DF004FDBC9 /* AVFoundation.framework */; };
 		AF618DC51E75B288008FA127 /* WYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF618DC41E75B288008FA127 /* WYXMainViewController.m */; };
 		AF6348BA1E77BA6C00756B69 /* WYXSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */; };
 		AF6AE00F1E7C11DF007602FB /* cicada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF6AE0051E7C11DF007602FB /* cicada.mp3 */; };
@@ -34,6 +35,7 @@
 		6CEFC25925296827F2A3F505 /* Pods-Nozic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nozic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nozic/Pods-Nozic.debug.xcconfig"; sourceTree = "<group>"; };
 		AF4C0BD61E7A589F005BF6B7 /* WYXMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYXMusic.h; path = Nozic/WYXMusic.h; sourceTree = SOURCE_ROOT; };
 		AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYXMusic.m; path = Nozic/WYXMusic.m; sourceTree = SOURCE_ROOT; };
+		AF4DE5291E7D92DF004FDBC9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF618DC31E75B288008FA127 /* WYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMainViewController.h; sourceTree = "<group>"; };
 		AF618DC41E75B288008FA127 /* WYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMainViewController.m; sourceTree = "<group>"; };
 		AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXSettingTableViewController.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4DE52A1E7D92DF004FDBC9 /* AVFoundation.framework in Frameworks */,
 				C2B3D51D273123E2B9032A0C /* libPods-Nozic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +86,7 @@
 		9ABC73C361516C0DCE5ADF87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF4DE5291E7D92DF004FDBC9 /* AVFoundation.framework */,
 				386AC35AC3749B8CD2E328EF /* libPods-Nozic.a */,
 			);
 			name = Frameworks;
@@ -135,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				AFECB3661E745F1C00B99DB7 /* AppDelegate.h */,
+				AFECB3671E745F1C00B99DB7 /* AppDelegate.m */,
 				AF4C0BD61E7A589F005BF6B7 /* WYXMusic.h */,
 				AF4C0BD71E7A589F005BF6B7 /* WYXMusic.m */,
-				AFECB3671E745F1C00B99DB7 /* AppDelegate.m */,
 				AF9ECF2A1E7BE0D900B3A688 /* WYXMusicTool.h */,
 				AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */,
 				AF618DC31E75B288008FA127 /* WYXMainViewController.h */,
