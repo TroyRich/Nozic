@@ -175,6 +175,8 @@
 -(void)playBtnDidTouch:(id *)sender
 {
     //播放当前选中的音轨
+    [WYXMusicTool sharedMusicTool].isPlayingMusic = ! [[WYXMusicTool sharedMusicTool] isPlayingMusic];
+    [self updatePlayerBtnStatue];
 }
 
 //定时器按钮点击的处理函数
@@ -236,16 +238,26 @@
                               
         [dic setValue:_player forKey:music.filename];
         _player.numberOfLoops = -1;
-    }
-    if (!selected) {
         [_player pause];
-    }else{
-        [_player prepareToPlay];
-        [_player play];
     }
+    if (selected && [WYXMusicTool sharedMusicTool].isPlayingMusic) {
+        [_player play];
+        
+    }else{
+        [_player pause];
+    }
+    music.isSelected = selected;
+    [self updatePlayerBtnStatue];
 }
 
-
+-(void)updatePlayerBtnStatue
+{
+    if ([WYXMusicTool sharedMusicTool].isPlayingMusic) {
+        self.playBarItem.title = @"暂停";
+    }else{
+        self.playBarItem.title = @"播放";
+    }
+}
 
 
 

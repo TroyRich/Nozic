@@ -22,6 +22,7 @@
 		AF6AE0171E7C11DF007602FB /* wind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF6AE00D1E7C11DF007602FB /* wind.mp3 */; };
 		AF6AE0181E7C11DF007602FB /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF6AE00E1E7C11DF007602FB /* Musics.plist */; };
 		AF9ECF2C1E7BE0D900B3A688 /* WYXMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */; };
+		AFA68B8B1E83A7BC0003E2AB /* WYXMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA68B8A1E83A7BC0003E2AB /* WYXMainTableViewCell.m */; };
 		AFECB3651E745F1C00B99DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3641E745F1C00B99DB7 /* main.m */; };
 		AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECB3671E745F1C00B99DB7 /* AppDelegate.m */; };
 		AFECB3701E745F1C00B99DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		AF6AE00E1E7C11DF007602FB /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 		AF9ECF2A1E7BE0D900B3A688 /* WYXMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMusicTool.h; sourceTree = "<group>"; };
 		AF9ECF2B1E7BE0D900B3A688 /* WYXMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMusicTool.m; sourceTree = "<group>"; };
+		AFA68B891E83A7BC0003E2AB /* WYXMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMainTableViewCell.h; sourceTree = "<group>"; };
+		AFA68B8A1E83A7BC0003E2AB /* WYXMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMainTableViewCell.m; sourceTree = "<group>"; };
 		AFECB3601E745F1C00B99DB7 /* Nozic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nozic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFECB3641E745F1C00B99DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFECB3661E745F1C00B99DB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				AF618DC31E75B288008FA127 /* WYXMainViewController.h */,
 				AF618DC41E75B288008FA127 /* WYXMainViewController.m */,
 				AF6348B81E77BA6C00756B69 /* WYXSettingTableViewController.h */,
+				AFA68B891E83A7BC0003E2AB /* WYXMainTableViewCell.h */,
+				AFA68B8A1E83A7BC0003E2AB /* WYXMainTableViewCell.m */,
 				AF6348B91E77BA6C00756B69 /* WYXSettingTableViewController.m */,
 				AFECB36F1E745F1C00B99DB7 /* Assets.xcassets */,
 				AFECB3711E745F1C00B99DB7 /* LaunchScreen.storyboard */,
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA68B8B1E83A7BC0003E2AB /* WYXMainTableViewCell.m in Sources */,
 				AFECB3681E745F1C00B99DB7 /* AppDelegate.m in Sources */,
 				AFECB3651E745F1C00B99DB7 /* main.m in Sources */,
 				AF9ECF2C1E7BE0D900B3A688 /* WYXMusicTool.m in Sources */,

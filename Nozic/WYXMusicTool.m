@@ -45,9 +45,33 @@ static WYXMusicTool *class = nil;
 }
 
 //当前控制器是否在播放音乐
--(BOOL)isPlayMusic{
-    return YES;
+-(void)setIsPlayingMusic:(BOOL)isPlayingMusic
+{
+    for (WYXMusic *music in _musics) {
+        AVAudioPlayer *player = [[self avPlayerDic] valueForKey:music.filename];
+        if (music.isSelected) {
+            if (isPlayingMusic) {
+                [player play];
+            }else{
+                [player pause];
+            }
+        }
+    }
+    _isPlayingMusic = isPlayingMusic;
 }
+
+
+//-(BOOL)isPlayingMusic
+//{
+//    for (id key in [self avPlayerDic]) {
+//        AVAudioPlayer *player = [[self avPlayerDic] valueForKey:key];
+//        if ([player isPlaying]) {
+//            return YES;
+//        }
+//    }
+//    
+//    return NO;
+//}
 
 -(void)pushMusic:(NSArray *)pushArr{
     

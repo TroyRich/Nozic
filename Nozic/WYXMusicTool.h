@@ -14,13 +14,15 @@
 /** 应用程序配置的音乐 */
 @property (nonatomic,strong) NSArray *musics;
 
+/** 负责管理音频的播放 */
+@property (nonatomic,assign) BOOL isPlayingMusic;
+
+
 /** 音频播放 */
 @property (nonatomic,strong) NSMutableDictionary *avPlayerDic;
 
 
 +(instancetype)sharedMusicTool;
-
--(BOOL)isPlayMusic;
 
 -(void)pushMusic:(NSArray *)pushArr;
 
